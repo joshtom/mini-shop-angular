@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   name = 'Josh';
+
+  loadedLink = 'recipe';
+  linkSelected(feature: string) {
+  this.loadedLink = feature;
 }
+}
+
