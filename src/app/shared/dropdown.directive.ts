@@ -18,5 +18,6 @@ export class DropdownDirective implements OnInit {
     this.isOpen = this.elRef.nativeElement.contains(event.target) ? !this.isOpen : false;
   }
   constructor(private elRef: ElementRef) { }
+  ngOnInit(){}
 
 }
