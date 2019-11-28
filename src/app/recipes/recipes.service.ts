@@ -12,7 +12,7 @@ export class RecipesService {
     new Recipe('Eggplant Parmesan', 'This is my favorite way to make eggplant parmesan', 'https://www.tablefortwoblog.com/wp-content/uploads/2018/05/eggplant-parmesan-recipe-photos-tablefortwoblog-1.jpg')
   ];
 
-  getRecipe() {
+  getRecipes() {
     return this.recipes.slice();
   }
 }
