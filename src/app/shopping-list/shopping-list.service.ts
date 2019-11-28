@@ -9,5 +9,8 @@ export class ShoppingListService {
     new Ingredient('Maggi', 300),
     new Ingredient('Gino', 70),
   ];
+  onIngredientAdded(ingredient: Ingredient){
+    this.ingredients.push(ingredient);
+   }
   constructor() { }
 }
