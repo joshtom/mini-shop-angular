@@ -11,10 +11,9 @@ export class ShoppingListService {
   ];
   getIngredients() {
     // Return a copy of the array of ingredients
+    return this.ingredients.slice();
   }
-  onIngredientAdded(ingredient: Ingredient){
-    this.ingredients.push(ingredient);
-   }
+ 
   constructor() { }
 }
  
