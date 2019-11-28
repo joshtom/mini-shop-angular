@@ -19,7 +19,8 @@ export class ShoppingListService {
   // Method to add a new ingredient
   addIngredient(ingredient: Ingredient) {
     this.ingredients.push(ingredient);
-    this.ingredientChanged.emit(this.ingredients);
+    //Emitting a copy of the original array of ingredients
+    this.ingredientChanged.emit(this.ingredients.slice());
   }
  
   constructor() { }
