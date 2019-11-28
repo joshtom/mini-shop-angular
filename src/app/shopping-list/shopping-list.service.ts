@@ -5,12 +5,16 @@ import { Ingredient } from '../shared/ingredient.model';
   providedIn: 'root'
 })
 export class ShoppingListService {
-  ingredients: Ingredient[] = [
+  private ingredients: Ingredient[] = [
     new Ingredient('Maggi', 300),
     new Ingredient('Gino', 70),
   ];
+  getIngredients() {
+    // Return a copy of the array of ingredients
+  }
   onIngredientAdded(ingredient: Ingredient){
     this.ingredients.push(ingredient);
    }
   constructor() { }
 }
+ 
