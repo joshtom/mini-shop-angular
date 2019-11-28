@@ -1,11 +1,11 @@
-import { Injectable } from '@angular/core';
+import { Injectable, EventEmitter } from '@angular/core';
 import { Recipe } from './recipe.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class RecipesService {
-
+  recipeSelected = new EventEmitter<Recipe>();
   constructor() { }
   private recipes: Recipe[] = [
     new Recipe('Sausage', 'Sausage Shrimp & Chicken', 'https://www.gimmesomeoven.com/wp-content/uploads/2014/03/Cajun-Jambalaya-Recipe-with-Andouille-Sausage-Shrimp-and-Chicken-3-1.jpg'),
