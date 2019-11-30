@@ -23,7 +23,17 @@ export class ShoppingListService {
     this.ingredientChanged.emit(this.ingredients.slice());
   }
 
-  addIngredients() {
+  addIngredients(ingredients: Ingredient[]) {
+    // Commented out to avoid too much unnecessary emittion
+    // for(let ingredient of ingredients) {
+    //   this.addIngredient(ingredient)
+    // } 
+    /*
+    . Directly adding all events in one goal and emitting it
+    . Use ES6 spread operator that turns array of element to list of elements
+     */
+     this.ingredient.push(...ingredients);
+     
     
   }
  
