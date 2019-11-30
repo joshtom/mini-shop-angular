@@ -33,6 +33,7 @@ export class ShoppingListService {
     . Use ES6 spread operator that turns array of element to list of elements
      */
      this.ingredient.push(...ingredients);
+     this.ingredientChanged.emit(ingredients.slice());
      
     
   }
