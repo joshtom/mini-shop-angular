@@ -22,6 +22,10 @@ export class ShoppingListService {
     //Emitting a copy of the original array of ingredients
     this.ingredientChanged.emit(this.ingredients.slice());
   }
+
+  addIngredients() {
+    
+  }
  
   constructor() { }
 }
