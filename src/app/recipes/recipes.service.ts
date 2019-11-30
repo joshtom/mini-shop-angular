@@ -30,4 +30,7 @@ export class RecipesService {
   getRecipes() {
     return this.recipes.slice();
   }
+  addIngredientsToShoppingList(ingredient: Ingredient[]) {
+
+  }
 }
