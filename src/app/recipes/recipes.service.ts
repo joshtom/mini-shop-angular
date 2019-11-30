@@ -33,8 +33,8 @@ export class RecipesService {
   getRecipes() {
     return this.recipes.slice();
   }
-  addIngredientsToShoppingList(ingredient: Ingredient[]) {
-   this.shoppingListService;
+  addIngredientsToShoppingList(ingredients: Ingredient[]) {
+   this.shoppingListService.addIngredient(ingredients);
   }
-}
+}s
  
