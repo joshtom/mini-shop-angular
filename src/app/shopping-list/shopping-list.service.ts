@@ -32,7 +32,7 @@ export class ShoppingListService {
     . Directly adding all events in one goal and emitting it
     . Use ES6 spread operator that turns array of element to list of elements
      */
-     this.ingredient.push(...ingredients);
+     this.ingredients.push(...ingredients);
      this.ingredientChanged.emit(ingredients.slice());
      
     
