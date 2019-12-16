@@ -13,6 +13,14 @@ import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-ed
 import { DropdownDirective } from './shared/dropdown.directive';
 import { ShoppingListService } from './shopping-list/shopping-list.service';
 
+
+// Setting path for the app routes
+const appRoutes: [
+  { path: '', component: '' },
+  { path: 'recipe', component: RecipesComponent },
+  { path: 'shopping-list', component: ShoppingListComponent },
+  // { path: '**', component: Error404Component }
+]
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,7 +33,12 @@ import { ShoppingListService } from './shopping-list/shopping-list.service';
     ShoppingEditComponent,
     DropdownDirective
   ],
+
   imports: [
+    RouterModule.forRoot(
+      appRoutes, 
+      { enableTracing: true }
+    )
     BrowserModule,
     FormsModule
   ],
