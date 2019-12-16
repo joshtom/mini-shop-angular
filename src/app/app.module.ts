@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
 
 import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
@@ -15,12 +16,13 @@ import { ShoppingListService } from './shopping-list/shopping-list.service';
 
 
 // Setting path for the app routes
-const appRoutes: [
-  { path: '', component: '' },
+const appRoutes: Routes = [
+  // { path: '/', component: '' },
   { path: 'recipe', component: RecipesComponent },
   { path: 'shopping-list', component: ShoppingListComponent },
   // { path: '**', component: Error404Component }
-]
+],
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,7 +40,7 @@ const appRoutes: [
     RouterModule.forRoot(
       appRoutes, 
       { enableTracing: true }
-    )
+    ),
     BrowserModule,
     FormsModule
   ],
