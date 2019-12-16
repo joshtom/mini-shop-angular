@@ -13,15 +13,9 @@ import { RecipeItemComponent } from './recipes/recipe-list/recipe-item/recipe-it
 import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-edit.component';
 import { DropdownDirective } from './shared/dropdown.directive';
 import { ShoppingListService } from './shopping-list/shopping-list.service';
+import { AppRoutingModule } from './app-routing.module';
 
 
-// Setting path for the app routes
-const appRoutes: Routes = [
-  // { path: '/', component: '' },
-  { path: 'recipe', component: RecipesComponent },
-  { path: 'shopping-list', component: ShoppingListComponent },
-  // { path: '**', component: Error404Component }
-]
 
 @NgModule({
   declarations: [
@@ -37,12 +31,9 @@ const appRoutes: Routes = [
   ],
 
   imports: [
-    RouterModule.forRoot(
-      appRoutes, 
-      { enableTracing: true }
-    ),
     BrowserModule,
-    FormsModule
+    FormsModule,
+    AppRoutingModule
   ],
   providers: [ShoppingListService],
   bootstrap: [AppComponent]
