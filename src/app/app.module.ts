@@ -21,7 +21,7 @@ const appRoutes: Routes = [
   { path: 'recipe', component: RecipesComponent },
   { path: 'shopping-list', component: ShoppingListComponent },
   // { path: '**', component: Error404Component }
-],
+]
 
 @NgModule({
   declarations: [
