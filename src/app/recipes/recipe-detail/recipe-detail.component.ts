@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Recipe } from '../recipe.model';
 import { RecipesService } from '../recipes.service';
 import { ActivatedRoute, Params } from '@angular/router';
@@ -10,7 +10,9 @@ import { ActivatedRoute, Params } from '@angular/router';
 })
 export class RecipeDetailComponent implements OnInit {
   recipe: Recipe;
-  id: number;
+  @Input() id: number;
+  edit: string;
+  
   constructor(private recipeService: RecipesService, 
               private route: ActivatedRoute) { }
 
@@ -20,6 +22,7 @@ export class RecipeDetailComponent implements OnInit {
     .subscribe(
       (params: Params) => {
         this.id = +params['id']; // Converting the string to number with + sign
+        this.edit = "edit";
         this.recipe = this.recipeService.getRecipe(this.id); // Fetching the recipe whenever the recipe changes
       }
     )
