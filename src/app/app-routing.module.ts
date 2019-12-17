@@ -10,7 +10,9 @@ const appRoutes: Routes = [
     { path: '', redirectTo: '/recipes', pathMatch: 'full' },  
     { path: 'recipe', component: RecipesComponent, children: [
         { path: '', component: RecipeStartComponent },
-        { path: 'new', component: RecipeEditComponent },
+        // Note that all components must come before any dynamic component
+        { path: 'new', component: RecipeEditComponent }, 
+        // Dynamic components should follow each other
         { path: ':id', component: RecipeDetailComponent },
         { path: ':id/edit', component: RecipeEditComponent }
     ] },
